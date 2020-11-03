@@ -84,9 +84,9 @@ Change to home directory
 
 ```$ cd ~``` using tilde, or ```$ cd``` without any arguments
 
-Remove a file permanently(!)
+Delete a file permanently - supports the same flags and arguments as the ```cp```command
 
-```$ rm```
+```$ rm -v a.txt``` lists files that were deleted
 
 Copying a single file
 
@@ -99,5 +99,27 @@ Copying multiple files
 ```$ cp a.txt b.txt foo```
   * the last argument must be a directory
   * the original file names of the source files will be used as the names of the new files in the target directory
-  * we can pass patterns to it:
-    * ```$cp *.txt foo```
+  * we can pass patterns to it: ```$cp *.txt foo```
+
+Copying + verbose output
+
+```$ cp -v a.txt b.txt```
+
+Copying directories - copying be default expects a file, not a directory, so we need to pass a flag:
+
+```$ cp -Rv foo bar``` copies all files from dir foo to dir bar
+
+Force overwriting a file - e.g. when two files are owned by two different users ('permission denied')
+
+```$ cp -f a.txt b.txt```
+
+Confirm owerwriting a file (when copying multiple files)
+
+```$ cp -i a.txt b.txt``` will prompt for confirmation (y/n)
+
+Moving files - supports the same flags and arguments as the ```cp```command (```mv``` is a combination of ```cp``` and ```rm```)
+
+```$ mv -v a.txt b.txt```
+ * doesn't support moving files accross systems, that can be done like:
+  1. $ cp a.txt b.txt
+  1. $ rm a.txt
