@@ -152,3 +152,6 @@ Reading from a file - can be done using the ```<```
 
 Copy-paste: ```ctrl-shift-c``` then ```ctrl-shift-v```
 Shortcut to open everything in a project directory: ```.``` or in VS Code: ```code .``` or in a different dir, e.g.: ```code my_awesome_project/.``` by specifying the path
+
+Rename a file
+```$ mv folder/old-file.txt folder/new-file.txt.```
