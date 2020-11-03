@@ -126,4 +126,14 @@ Moving files - supports the same flags and arguments as the ```cp```command (```
 
 Redirecting output - can be used to redirect the output of one command to the input to another command - uses the pipe (|) operator
 
-```$ ls -a ~ | grep _``` pipes the output of the ```ls``` command to the input of the ```grep``` command to find all the files in the directory that contain an underscore ```(_) ```
+```$ ls -a ~ | grep _``` pipes the output of the ```ls``` command to the input of the ```grep``` command to find all the files in the home directory that contain an underscore ```(_)```
+
+Chaining commands together - using pipe (|)
+
+```$ ls -a ~ | grep _ | sed "s/_/-/g"``` takes the output of a listing and passes it to the ```sed``` command to change all of the underscores to dashes
+
+Writing to a file - using the output
+
+```$ ls -a ~| grep _ > underscores.txt``` would write the results of our search for files in the home directory that containt underscores
+
+Reading from a file - can be done using the ```<```
