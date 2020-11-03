@@ -1,16 +1,24 @@
 # Terminal Practice
 
-Present Working Directory
+Present working directory
 
 ```$ pwd```
 
-Present Working Directory without symlinks
+Present working directory without symlinks
 
 ```$ pwd -P```
 
 Make Directory
 
-```$ mkdir```
+```$ mkdir foo```
+
+Create intermediate directory (nested)
+
+```$ mkdir -p a/b/c```
+
+Verbose output (prints the results of mkdir in the console)
+
+```$ mkdir -v a``` output: ```mkdir: created directory 'a'```
 
 Clear history
 
@@ -28,7 +36,7 @@ List files with the long file format
 
 ```$ ls -l```
 
-List files - Human Readable Sizes
+List files with human readable sizes
 
 ```$ ls -h``` or ```$ ls -lh```
 
@@ -64,18 +72,32 @@ Create a file
 
 ```$ touch```
 
-Change Directory
+Change directory
 
-```$ cd```
+```$ cd /path/to/target```
 
 Change directory one folder up
 
 ```$ cd ..```
 
-Change to Home Directory using tilde
+Change to home directory 
 
-```$ cd ~``` or ```$ cd``` without any arguments
+```$ cd ~``` using tilde, or ```$ cd``` without any arguments
 
 Remove a file permanently(!)
 
 ```$ rm```
+
+Copying a single file
+
+```$ cp a.txt b.txt``` (source file + target file)
+  * the target can either be the name of the file we are copying to
+  * or the directory we want to copy to - if only specifying the directory, the original file name of the source file will be used to create a new file in the target directory
+  
+Copying multiple files
+
+```$ cp a.txt b.txt foo```
+  * the last argument must be a directory
+  * the original file names of the source files will be used as the names of the new files in the target directory
+  * we can pass patterns to it:
+    * ```$cp *.txt foo```
