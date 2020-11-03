@@ -88,6 +88,17 @@ Delete a file permanently - supports the same flags and arguments as the ```cp``
 
 ```$ rm -v a.txt``` lists files that were deleted
 
+Delete an empty directory
+
+```$ rmdir foo```
+
+Delete a non-empty directory
+
+```$ rmdir /S foo```
+
+Force delete a non-empty directory without confirmation
+```$ rmdir /Q /S foo```
+
 Copying a single file
 
 ```$ cp a.txt b.txt``` (source file + target file)
@@ -137,3 +148,7 @@ Writing to a file - using the output
 ```$ ls -a ~| grep _ > underscores.txt``` would write the results of our search for files in the home directory that containt underscores
 
 Reading from a file - can be done using the ```<```
+
+
+Copy-paste: ```ctrl-shift-c``` then ```ctrl-shift-v```
+Shortcut to open everything in a project directory: ```.``` or in VS Code: ```code .``` or in a different dir, e.g.: ```code my_awesome_project/.``` by specifying the path
