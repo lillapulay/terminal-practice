@@ -121,5 +121,9 @@ Moving files - supports the same flags and arguments as the ```cp```command (```
 
 ```$ mv -v a.txt b.txt```
  * doesn't support moving files accross systems, that can be done like:
-  1. $ cp a.txt b.txt
-  1. $ rm a.txt
+   1. ```$ cp a.txt b.txt```
+   1. ```$ rm a.txt```
+
+Redirecting output - can be used to redirect the output of one command to the input to another command - uses the pipe (|) operator
+
+```$ ls -a ~ | grep _``` pipes the output of the ```ls``` command to the input of the ```grep``` command to find all the files in the directory that contain an underscore ```(_) ```
